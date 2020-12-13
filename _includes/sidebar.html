@@ -1,0 +1,74 @@
+<!-- Sidebar -->
+  <div id="sidebar" class="4u">
+
+      <!-- Excerpts -->
+          <section>
+              <ul class="divided">
+
+                {% for post in site.posts %}
+
+                  {% unless (post.categories  contains 'frontpage') or (post.categories contains 'sidebar-highlight') %}
+
+                  <li>
+
+                      <!-- Excerpt -->
+                          <article class="is-excerpt">
+                              <header>
+                                  {% comment %} Date formatting info http://joshbranchaud.com/blog/2012/12/24/Date-Formatting-in-Jekyll.html {% endcomment %}
+                                  <span class="date">{{ post.date | date: "%B %d, %Y"}} </span>
+                                  <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                              </header>
+                              {{ post.excerpt }}
+                          </article>
+
+                  </li>
+
+                  {% endunless %}
+
+                {% endfor %}
+                
+              </ul>
+          </section>
+
+      <!-- Highlights -->
+          <section>
+
+              <ul class="divided">
+                  {% for post in site.categories.sidebar-highlight %}
+                  <li>
+                      <!-- Highlight -->
+                          <article class="is-highlight">
+                              <header>
+                                  <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                              </header>
+
+                              {% comment %}
+                              <!-- more--> tip via https://coderwall.com/p/eazb7w
+                              {% endcomment %}
+
+                              {% if post contains 'image' %}
+
+                                <a class="image image-left" href="{{ site.baseurl }}{{ post.url }}">
+                                  <img alt="" src="{{ site.baseurl }}{{ post.image }}">
+                                </a>
+
+                              {% endif %}
+
+                              {% if post.content contains '<!--more-->' %}
+                                {{ post.content | split:'<!--more-->' | first }}
+                              {% else %}
+                                <!-- Case for when no excerpt is defined -->
+                                {{ post.excerpt }}
+                              {% endif %}
+
+                              <ul class="actions">
+                                  <li><a href="{{ site.baseurl }}{{ post.url }}" class="button button-icon icon icon-file">Learn More</a></li>
+                              </ul>
+                          </article>
+                  </li>
+                  {% endfor %}
+              </ul>
+          </section>
+
+  </div>
+

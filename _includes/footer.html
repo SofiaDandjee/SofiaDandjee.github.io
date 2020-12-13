@@ -1,143 +1,81 @@
-<!-- Footer -->
-<div id="footer">
-	<div class="container">
-		<div class="row">
+ <!-- Footer Wrapper -->
+      <div id="footer-wrapper">
 
-			<!-- Tweets -->
-			<section class="4u">
-				<header>
-					<h2 class="icon fa-twitter circled"><span class="label">Tweets</span></h2>
-				</header>
-				<ul class="divided">
-					<li>
-						<article class="tweet">
-							Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-							<span class="timestamp">5 minutes ago</span>
-						</article>
-					</li>
-					<li>
-						<article class="tweet">
-							Hendrerit rutrum quisque.
-							<span class="timestamp">30 minutes ago</span>
-						</article>
-					</li>
-					<li>
-						<article class="tweet">
-							Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-							<span class="timestamp">3 hours ago</span>
-						</article>
-					</li>
-					<li>
-						<article class="tweet">
-							Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-							<span class="timestamp">5 hours ago</span>
-						</article>
-					</li>
-				</ul>
-			</section>
+        <!-- Footer -->
+          <div id="footer" class="container">
+            <header>
+              <h2>Questions or comments? <strong>Get in touch:</strong></h2>
+            </header>
+            <div class="row">
+              <div class="6u">
+                <section>
+                  <form method="post" action="#">
+                    <div class="row half">
+                      <div class="6u">
+                        <input name="name" placeholder="Name" type="text" class="text" />
+                      </div>
+                      <div class="6u">
+                        <input name="email" placeholder="Email" type="text" class="text" />
+                      </div>
+                    </div>
+                    <div class="row half">
+                      <div class="12u">
+                        <textarea name="message" placeholder="Message"></textarea>
+                      </div>
+                    </div>
+                    <div class="row half">
+                      <div class="12u">
+                        <a href="#" class="button button-icon icon icon-envelope">Send Message</a>
+                      </div>
+                    </div>
+                  </form>
+                </section>
+              </div>
+              <div class="6u">
+                <section>
+                  <p>I'm interested in hearing from smart people with cool ideas.</p>
+                  <div class="row">
+                    <ul class="icons 6u">
+                      <li class="icon icon-home">
+                        {{ site.location }}
+                      </li>
+                      <li class="icon icon-skype">
+                        {{ site.skype }}
+                      </li>
+                      <li class="icon icon-phone">
+                        {{site.phone}}
+                      </li>
+                      <li class="icon icon-envelope">
+                        <a href="mailto:{{site.email}}">{{site.email}}</a>
+                      </li>
+                    </ul>
+                    <ul class="icons 6u">
+                      <li class="icon icon-twitter">
+                        <a href="https://twitter.com/{{site.twitter}}">@{{site.twitter}}</a>
+                      </li>
 
-			<!-- Posts -->
-			<section class="4u">
-				<header>
-					<h2 class="icon fa-file circled"><span class="label">Posts</span></h2>
-				</header>
-				<ul class="divided">
-					<li>
-						<article class="post stub">
-							<header>
-								<h3><a href="#">Nisl fermentum integer</a></h3>
-							</header>
-							<span class="timestamp">3 hours ago</span>
-						</article>
-					</li>
-					<li>
-						<article class="post stub">
-							<header>
-								<h3><a href="#">Phasellus portitor lorem</a></h3>
-							</header>
-							<span class="timestamp">6 hours ago</span>
-						</article>
-					</li>
-					<li>
-						<article class="post stub">
-							<header>
-								<h3><a href="#">Magna tempus consequat</a></h3>
-							</header>
-							<span class="timestamp">Yesterday</span>
-						</article>
-					</li>
-					<li>
-						<article class="post stub">
-							<header>
-								<h3><a href="#">Feugiat lorem ipsum</a></h3>
-							</header>
-							<span class="timestamp">2 days ago</span>
-						</article>
-					</li>
-				</ul>
-			</section>
+                      <li class="icon icon-github">
+                        <a href="https://github.com/{{site.github}}">{{site.github}}</a>
+                      </li>
+                      <li class="icon icon-facebook">
+                        <a href="https://facebook.com/{{site.facebook}}">{{site.facebook}}</a>
+                      </li>
+                      <li class="icon icon-google-plus">
+                        <a href="https://plus.google.com/{{site.googleplus}}">{{site.owner}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
 
-			<!-- Photos -->
-			<section class="4u">
-				<header>
-					<h2 class="icon fa-camera circled"><span class="label">Photos</span></h2>
-				</header>
-				<div class="row 25% no-collapse">
-					<div class="6u">
-						<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-					</div>
-					<div class="6u">
-						<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-					</div>
-				</div>
-				<div class="row 25% no-collapse">
-					<div class="6u">
-						<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-					</div>
-					<div class="6u">
-						<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-					</div>
-				</div>
-				<div class="row 25% no-collapse">
-					<div class="6u">
-						<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-					</div>
-					<div class="6u">
-						<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-					</div>
-				</div>
-			</section>
+        <!-- Copyright -->
+          <div id="copyright" class="container">
+            <ul class="links">
+              <li>&copy; {{ site.owner }}. All rights reserved</li>
+              <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+            </ul>
+          </div>
 
-		</div>
-		<hr />
-		<div class="row">
-			<div class="12u">
-
-				<!-- Contact -->
-				<section class="contact">
-					<header>
-						<h3>Nisl turpis nascetur interdum?</h3>
-					</header>
-					<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-					</ul>
-				</section>
-
-				<!-- Copyright -->
-				<div class="copyright">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-</div>
+      </div>
