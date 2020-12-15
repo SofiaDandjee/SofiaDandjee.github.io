@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A dive into Londoners food habits." />
 
-        <title></title>
+        <title>Welcome to Jekyll!</title>
         <meta name="viewport" content="width=device-width">
         <!-- <meta name="viewport" content="width=1040" /> -->
 
@@ -93,26 +93,44 @@
         <div class="inner">
         <!-- Main -->
           <section id="main" class="container">
-                  <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+                  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Welcome to Jekyll!</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-07-13T02:01:57+02:00" itemprop="datePublished">Jul 13, 2013
+      </time></p>
+  </header>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory - edit this post and re-build (or run with the <code class="language-plaintext highlighter-rouge">-w</code> switch) to see your changes!
+To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll’s GitHub repo</a>.</p>
+
+<p>Notes &amp; Modifications:</p>
+<ul class="style1">
+<li>Removed left sidebar, right sidebar, no-sidebar links from header wrapper (in \_includes/head-wrapper.html).  Rather than locating those files in the root directory, they're now layouts in \_layouts directory).  The default layout is used for the front page index (\_layouts/default.html), posts use the right hand sidebar layout (\_layouts/right-sidebar.html), and the strongly-typed.html and archive.html pages use the no-sidebar layout (\_layouts/no-sidebar.html). If you want a left sidebar, overwrite the post.html file with the contents of left-sidebar.html.</li>
+<li>The site name and description shown at the top of pages is set in \_config.yml.</li>
+<li>The contact info at the bottom of pages is set in \_config.yml.</li>
+<li>Some lorum ipsum text from Stronly Typed has been replaced with text from [Space Ipsum](http://spaceipsum.com).</li>
+<li>Strongly Typed's images have been replaced with images from placekitten / placedog etc (placeholder images of cats and dogs). The original images are still in the images/ directory.</li>
+<li>The contact form doesn't yet work.</li>
+<li>See the discussion of baseurl here: http://jekyllrb.com/docs/github-pages/.  You'll need to run jekyll with the --baseurl '' option if you're doing local development, and set baseurl appropriately in your _config.yml file.
+</li>
+</ul>
+
+
+  </div><a class="u-url" href="/jekyll/update/2013/07/13/welcome-to-jekyll.html" hidden></a>
+</article>
 
           </section>
         </div>

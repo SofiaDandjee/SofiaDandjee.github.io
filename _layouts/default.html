@@ -11,40 +11,14 @@
 
     {% include head-wrapper.html %}
 
-    {% include features.html %}
-    {% include banner.html %}
-
     <!-- Main Wrapper -->
       <div id="main-wrapper">
-
+        <div class="inner">
         <!-- Main -->
-          <div id="main" class="container">
-            <div class="row">
-
-              <!-- Content -->
-                <div id="content" class="8u">
-
-                  {% for page in site.categories.frontpage %}                  
-
-                  <!-- Post -->
-                    <article class="is-post">
-                      <header>
-                        <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-                      </header>
-                      {{ page.content }}
-                      <ul class="actions">
-                        <li><a href="{{ site.baseurl }}{{ page.url }}" class="button button-icon icon icon-file">Permalink</a></li>
-                      </ul>
-                    </article>
-
-                  {% endfor %}
-                </div>
-
-                {% include sidebar.html %}
-
-            </div>
-          </div>
-
+          <section id="main" class="container">
+                  {{content}}
+          </section>
+        </div>
       </div>
 
    {% include footer.html %}
