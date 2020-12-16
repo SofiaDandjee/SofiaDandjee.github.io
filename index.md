@@ -11,7 +11,7 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 
 ### What constitutes a healthy diet?
 
-<iframe frameborder="0" class="juxtapose" width="100%" height="300" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
+<iframe frameborder="0" class="juxtapose" width="900%" height="300" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
 
 ### What is the proportion of food related expenditure in each borough? How does it relate to its economic situation?
 
