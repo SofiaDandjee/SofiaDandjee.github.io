@@ -12,12 +12,13 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 ### What constitutes a healthy diet?
 
 
-<body> 
+    <body>
+
     <section class="flipping-cards">
         <div class="flipping-card-wrapper">
             <div class="flipping-card-item-wrapper">
                 <div class="flipping-card-item-side flipping-card-item-side-front">
-                    <img src="/images/salt.png" alt="" class="flipping-card-item-img">
+                    <img src="/img/html-css-flipping-card-1.png" alt="" class="flipping-card-item-img">
                 </div>
                 <div class="flipping-card-item-side flipping-card-item-side-back">
                     <div class="flipping-card-back-wrapper">
@@ -26,9 +27,37 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
                     </div>
                 </div>
             </div>
+
+            <div class="flipping-card-item-wrapper">
+                <div class="flipping-card-item-side flipping-card-item-side-front">
+                    <img src="/img/html-css-flipping-card-2.png" alt="" class="flipping-card-item-img">
+                </div>
+                <div class="flipping-card-item-side flipping-card-item-side-back">
+                    <div class="flipping-card-back-wrapper">
+                        <p>Hello I am learning how to create flipping cards using HTML & CSS, will you mind joining me?</p>
+                        <button class="flipping-card-back-wrapper__btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipping-card-item-wrapper">
+                <div class="flipping-card-item-side flipping-card-item-side-front">
+                    <img src="/img/html-css-flipping-card-3.png" alt="" class="flipping-card-item-img">
+                </div>
+                <div class="flipping-card-item-side flipping-card-item-side-back">
+                    <div class="flipping-card-back-wrapper">
+                        <p>Hello I am learning how to create flipping cards using HTML & CSS, will you mind joining me?</p>
+                        <button class="flipping-card-back-wrapper__btn">Read More</button>
+                    </div>
+
+                </div>
+            </div>
         </div>
+        <p class="copyright">© 2020, all rights reserved, designed by: Emmanuel Etukudo</p>
     </section>
-</body> 
+
+
+    </body>
 
 
 
