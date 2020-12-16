@@ -7,11 +7,11 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 
 ### What is the average diet of a Londoner?
 
-{% include energy.html %}
-
 {% include piecharts.html %}
 
 ### What constitutes a healthy diet?
+
+https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=004f3410-3f8b-11eb-83c8-ebb5d6f907df
 
 ### What is the proportion of food related expenditure in each borough? How does it relate to its economic situation?
 
