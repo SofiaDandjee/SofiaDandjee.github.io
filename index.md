@@ -20,5 +20,5 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 {% include economicindicators_map.html %}
 
  ### blabla
- 
+  
 {% include scatter3d_plot.html %}
