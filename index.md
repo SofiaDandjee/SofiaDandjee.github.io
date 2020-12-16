@@ -15,17 +15,14 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 <body> 
     <center> 
         <div class="card"> 
-            <h2>HTML | Flip Card</h2> 
+            <h2>Salt</h2> 
             <div class="card-inner"> 
                 <div class="card-front"> 
                     <img src= images/salt.jpg" style="width:250px;height:250px;"> 
                 </div> 
                 <div class="card-back"> 
-                    <h1>GeeksforGeeks</h1> 
-                    <p>A Computer Science Portal for Geeks</p> 
-                    <a href="https://ide.geeksforgeeks.org/tryit.php"> 
-                        Try our ide 
-                    </a> 
+                    <h1>WHO recommendation:</h1> 
+                    <p>Total fat should not exceed 30% of total energy intake.</p> 
                 </div> 
             </div> 
         </div> 
