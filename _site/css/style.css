@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 @font-face
 {
@@ -1257,4 +1258,27 @@
   content: "";
   display: table;
   clear: both;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#menu {
+	border: solid 0px #ed786a;
+	margin: auto;
+	width:50%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-left: 5px;
+	background-color: #ffd6d1;
+}
+
+#menu h1 {
+	text-align: center;
+	font-size: 2.5em;
 }
