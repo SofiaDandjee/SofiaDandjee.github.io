@@ -12,28 +12,25 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 ### What constitutes a healthy diet?
 
 
-<div class="col-md-4 col-lg-4"  data-aos="fade-up" data-aos-delay="0">
-  <div class="flip-container">
-      <div class="flipper">
-          <div class="front" style="background-color:#0F4C81;background-image: url(images/salt.jpg); ">
-              <div class="box">
-                  <h2>Salt</h2>
-              </div>
-          </div>
-          <div class="back" style="background:#0F4C81"> <!-- back content -->
-              <blockquote>
-                  <p>2019 portrait:</p> <p><br /> <br />Single <br />Male <br />Good <br />American <br /> Criminal <br /> College <br />1m80 <br /> 86kg <br /> Blue eyes <br /> Black hair
-              </blockquote>
-              <div class="author d-flex">
-                  <div class="image mr-3 align-self-center">
-                      <img src="images/salt.jpg" alt="">
-                  </div>
-                  <div class="name align-self-center">Salt</div>
-              </div>
-          </div>
-      </div>
-  </div> <!-- .flip-container -->
-</div>
+<body> 
+    <center> 
+        <div class="card"> 
+            <h2>HTML | Flip Card</h2> 
+            <div class="card-inner"> 
+                <div class="card-front"> 
+                    <img src= images/salt.jpg" style="width:250px;height:250px;"> 
+                </div> 
+                <div class="card-back"> 
+                    <h1>GeeksforGeeks</h1> 
+                    <p>A Computer Science Portal for Geeks</p> 
+                    <a href="https://ide.geeksforgeeks.org/tryit.php"> 
+                        Try our ide 
+                    </a> 
+                </div> 
+            </div> 
+        </div> 
+    </center> 
+</body> 
 
 
 
