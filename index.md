@@ -16,3 +16,5 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 ### What is the proportion of food related expenditure in each borough? How does it relate to its economic situation?
 
 ### How does a healthy diet relates to the borough's economic situation? Is this connection area-dependent?
+
+{% include economicindicators_map.html %}
