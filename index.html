@@ -91,7 +91,19 @@ fruits and vegetables and dairy seem to decrease the disorders prevalence. On th
 
 <p><b> How do we measure the healthiness of a diet? </b></p>
 
+<p>I already hear you saying, what’s the point of all this?
+The point of all this analysis is that at the end, we can compare the healthiness of Londoners diet with some economic indicators as income and child poverty. So we need a diet score such that if the score is 1, the corresponding diet is diversified, balanced and healthy and respectively, if the score is 0, the corresponding diet is completely unhealthy.
+We found two ways to compute this score:
+<ol>
+ <li>Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features </li>
+ <li>Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features </li></p>
+</ol>
+  
+<i>Results for Score 1</i>
+
 <div align="center"> {% include barplots_score1.html %} </div>
+
+<i>Results for Score 2</i>
 
 <div align="center"> {% include barplots_score2.html %} </div>
 
