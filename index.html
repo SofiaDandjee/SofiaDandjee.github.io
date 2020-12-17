@@ -16,19 +16,36 @@ title: Food (and money) for thought
   between the economic situations of households and their food purchases. The datasets we used contain informations about incomes,
   children poverty and grocery purchases per borough of Greater London. </p>
 
+<div id="data">
+  <h2> The tastiest of ingredients: <strong> the data </strong> </h2>
+
+  <p> To do this, we use food purchases data from the Tesco Grocery 1.0 dataset. It consists in a record of 420 M food items purchased by
+    1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015.
+    These data are aggregated at different spatial granularities (from Lower Super Output Areas (LSOA) to Boroughs) to preserve anonymity. </p>
+
+{% include stats.html %}
+    <p> We also use the following datasets:
+    <li> <a href="https://figshare.com/articles/dataset/Area-level_grocery_purchases/7796666?backTo=/collections/Tesco_Grocery_1_0/4769354">Earnings by Place of
+      Residence, Borough</a>: gross earnings of employees by place of residence. We only considered the full-time weekly earnings per borough in 2015. </li>
+    <li> <a href="https://data.london.gov.uk/dataset/earnings-place-residence-borough">Children poverty, Borough</a>: numbers and percentages of children in
+      poverty for Borough and London Wards (at 31 August each year). We only considered the children (dependent children under the age of 20) in child benefit
+      families per borough in 2015. Therefore, the higher the value of the aid perceived, the more precarious the economic situation. </li>
+    <li> <a href="https://data.london.gov.uk/dataset/london-consumer-expenditure-estimates-2011-2036">London Consumer Expenditure Estimates - Detailed Borough
+      Base</a>: consumer expenditure data to 2036 broken down by London borough. We transformed the data concerning food expenditure in percentage of the total
+      expenditure over the year 2015, per borough. </li></p>
+
+</div>
 
 <div id="entree">
-<h2> What is the average diet of a Londoner? </h2>
+  <h2> What is the average diet of a Londoner? </h2>
 </div>
 
 <p> Let's start with a quick look at the Londoners food habits! </p>
 
-<p> To do this, we use food purchases data from the Tesco Grocery 1.0 dataset. It consists in a record of 420 M food items purchased by
-  1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015.
-  These data are aggregated at different spatial granularities (from Lower Super Output Areas (LSOA) to Boroughs) to preserve anonymity. </p>
-
-<p> But are these data really representative of the londonian food habits? Sounds good… First, Tesco is the market leader of groceries in the UK.
+<p> But is the data really representative of the londonian food habits? Sounds good… First, Tesco is the market leader of groceries in the UK.
   Then, we removed the areas where the Tesco food purchases data is not sufficiently representative of the food purchases of the area's population. </p>
+
+
 
 <p>  Let's select a category! </p>
 
@@ -65,10 +82,12 @@ If we now look at the most represented food categories, at first sight, one may 
 
 <p> Let’s now see if this diet has a direct impact on the Londoners health. We specifically look at the prevalence of obesity and type-2 diabetes,
   two metabolic syndrome conditions strongly linked to food consumption habits.
-  The data collected by the Active People Survey (APS) in 2012 among a statistical sample of borough residents indicate that:
-  <li>	37.4 % of Londoners are overweight </li>
-  <li>	19.8 % of Londoners are obese </li>
-  So only 40 % of the londonian population has an “healthy weight” ! </p>
+  The data collected by the Active People Survey (APS) in 2012 among a statistical sample of borough residents indicate that 37.4 % of Londoners are overweight,
+  and 19.8 %  are obese. So only 40 % of the londonian population has an “healthy weight” !
+</p>
+
+{% include obesity.svg %}
+
 
 <p> To verify that the Londoners food habits is associated with an increased prevalence of metabolic disorders, we correlate diabetes,
   obesity and overweight prevalence among adults and children with the different food and nutrients categories that we have seen previously. </p>
@@ -114,16 +133,6 @@ We found two ways to compute this score:
 <p> After this more detailed view on the Londoner’s food diet and some metabolic syndrome conditions strongly correlated with food consumption habits,
   let’s us interest now in some economic indicators. <b>Especially, how food expenditures are related to wealth? </b></p>
 
-<p> For that we used here the following datasets:
-<li> <a href="https://figshare.com/articles/dataset/Area-level_grocery_purchases/7796666?backTo=/collections/Tesco_Grocery_1_0/4769354">Earnings by Place of
-  Residence, Borough</a>: gross earnings of employees by place of residence. We only considered the full-time weekly earnings per borough in 2015. </li>
-<li> <a href="https://data.london.gov.uk/dataset/earnings-place-residence-borough">Children poverty, Borough</a>: numbers and percentages of children in
-  poverty for Borough and London Wards (at 31 August each year). We only considered the children (dependent children under the age of 20) in child benefit
-  families per borough in 2015. Therefore, the higher the value of the aid perceived, the more precarious the economic situation. </li>
-<li> <a href="https://data.london.gov.uk/dataset/london-consumer-expenditure-estimates-2011-2036">London Consumer Expenditure Estimates - Detailed Borough
-  Base</a>: consumer expenditure data to 2036 broken down by London borough. We transformed the data concerning food expenditure in percentage of the total
-  expenditure over the year 2015, per borough. </li></p>
-
 <p> We propose here a visualization of the wealth differences between the different boroughs through these three indicators: </p>
 
 {% include economicindicators_map.html %}
@@ -138,16 +147,17 @@ Concerning the food expenditures, they appear to represent a more important part
 
 <h2 id ="bonbon"> How does a healthy diet relates to the borough's economic situation? Is this connection area-dependent? </h2>
 
-<p> The ancient Greek Herophilus was saying: "When health is absent... wealth becomes useless". For sure, but how are they related? 
-  The WHO asserts that the global food price crisis threatens public health and especially the health of the low-income families. 
-  But how does a healthy diet relate to the economic situation? </p> 
+<p> The ancient Greek Herophilus was saying: "When health is absent... wealth becomes useless". For sure, but how are they related?
+  The WHO asserts that the global food price crisis threatens public health and especially the health of the low-income families.
+  But how does a healthy diet relate to the economic situation? </p>
 
 <div align="center"> {% include scatter3d.html %} </div>
 
-<p> Here, it clearly appears again that the higher the earnings and the lower the child poverty, the lower the proportion of food expenditures. 
-But more important here, the higher the earnings and the lower the child poverty, the higher the healthy diet score. 
+<p> Here, it clearly appears again that the higher the earnings and the lower the child poverty, the lower the proportion of food expenditures.
+But more important here, the higher the earnings and the lower the child poverty, the higher the healthy diet score.
 So it would be a reasonable thing to think that a healthy diet is clearly positively correlated to the borough’s economic situation. </p>
 
+<h2> References </h2>
 
 The detailed analysis of the project can be found <a href = "https://nbviewer.jupyter.org/github/SofiaDandjee/food_for_thought/blob/main/project.ipynb"> here </a>.
 

@@ -958,7 +958,7 @@
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: cover;
+
 	}
 
 
@@ -1283,6 +1283,22 @@
 	font-size: 2.5em;
 }
 
+#statbox {
+	border: solid 3px #ed786a;
+	border-radius: 50%;
+	vertical-align: middle;
+	padding-top: 40px;
+	text-align: center;
+	top:50%;
+	height:150px;
+	width:150px;
+
+}
+
+#statbox h1 {
+	font-size: 2.3em;
+}
+
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -1328,6 +1344,7 @@
   background-color: #ffd6d1;
   color: white;
   transform: rotateY(180deg);
+	text-align: center;
 }
 
 .sugar {
@@ -1346,18 +1363,12 @@
 }
 
 .rotate {
-	transform: rotate(-45deg);
-	/* Safari */
-  -webkit-transform: rotate(-45deg);
 
-  /* Firefox */
-  -moz-transform: rotate(-45deg);
+	text-align: center;
+	margin: 0;
+  position: absolute;
+  top: 50%;
 
-  /* IE */
-  -ms-transform: rotate(-45deg);
-
-  /* Opera */
-  -o-transform: rotate(-45deg);
 }
 
 @property --num {
