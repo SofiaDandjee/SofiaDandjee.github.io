@@ -12,28 +12,39 @@ title: Food (and money) for thought
 </div>
 
 
-“An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases. 
-However, the price of the food products influences greatly the decisions of individuals in purchasing them or not. 
-There is a strong belief amongst consumers that more expensive products are healthier than cheaper ones. This belief was supported by a 2013 study from Harvard School of Public Health that found that eating a healthy diet costs about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change, but this represents an “extra” $2,200 per year for a family of four. 
-So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life?
-We provide here insights on the food consumption discrepancies between different boroughs of Greater London and explore the link between the economic situations of households and their food purchases. 
-The datasets we used contain informations about incomes, children poverty and grocery purchases per borough of Greater London. 
+<p> “An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps 
+  avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases. However, the price of the food products 
+  influences greatly the decisions of individuals in purchasing them or not. There is a strong belief amongst consumers that more 
+  expensive products are healthier than cheaper ones. This belief was supported by a 2013 study from Harvard School of Public Health
+  that found that eating a healthy diet costs about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change, 
+  but this represents an “extra” $2,200 per year for a family of four. So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life? </p>
 
+<p> We provide here insights on the food consumption discrepancies between different boroughs of Greater London and explore the link 
+  between the economic situations of households and their food purchases. The datasets we used contain informations about incomes, 
+  children poverty and grocery purchases per borough of Greater London. </p>
+
+  
 <div id="entree">
 <h2> What is the average diet of a Londoner? </h2>
 </div>
-Let's start with a quick look at the Londoners food habits!
 
-To do this, we use food purchases data from the Tesco Grocery 1.0 dataset. It consists in a record of 420 M food items purchased by 1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015. These data are aggregated at different spatial granularities (from Lower Super Output Areas (LSOA) to Boroughs) to preserve anonymity. 
+<p> Let's start with a quick look at the Londoners food habits! </p>
 
-But are these data really representative of the londonian food habits? Sounds good…
-First, Tesco is the market leader of groceries in the UK. Then, we removed the areas where the Tesco food purchases data is not sufficiently representative of the food purchases of the area's population. 
-Let's select a category!
+<p> To do this, we use food purchases data from the Tesco Grocery 1.0 dataset. It consists in a record of 420 M food items purchased by 
+  1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015.
+  These data are aggregated at different spatial granularities (from Lower Super Output Areas (LSOA) to Boroughs) to preserve anonymity. </p>
+
+<p> But are these data really representative of the londonian food habits? Sounds good… First, Tesco is the market leader of groceries in the UK. 
+  Then, we removed the areas where the Tesco food purchases data is not sufficiently representative of the food purchases of the area's population. </p>
+
+<p>  Let's select a category! </p>
 
 {% include piecharts.html %}
 
-It seems that Londoners have a diet rich in fats (especially saturated fats!) and carbohydrates (especially sugars!).
-If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as the top one food category! But the sweets seem to occupy an important part of the energy income. Grains and dairy come after, yet quickly regained by ready made food…
+<p> It seems that Londoners have a diet rich in fats (especially saturated fats!) and carbohydrates (especially sugars!).
+If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
+  the top one food category! But the sweets seem to occupy an important part of the energy income. Grains and dairy come after, 
+  yet quickly regained by ready made food… </p>
 
 <h2 id="plat"> What constitutes a healthy diet? </h2>
 
@@ -43,10 +54,6 @@ If we now look at the most represented food categories, at first sight, one may 
 According to the World Health Organization [https://www.who.int/news-room/fact-sheets/detail/healthy-diet], a healthy diet includes the following: </p>
 
 <ul> 
-<li> article 1 </li> 
-<li> article 2 </li> 
-
-
 <li> fruit, vegetables, legumes, nuts and whole grains </li> 
 <li> at least 400 g of fruit and vegetables per day </li> 
 <li>	less than 10% of total energy intake from free sugars (ideally less than 5%) </li> 
@@ -56,19 +63,23 @@ According to the World Health Organization [https://www.who.int/news-room/fact-s
 <li>	less than 5g of salt per day </li> 
 </ul>   
   
-Let’s see if Londoners follow (some of) the WHO recommendations…
-(INSERT FLIPPING CARDS)
-The results are clear: Londoners average diet is richer in free sugars and fats than what it should be.
+<p> Let’s see if Londoners follow (some of) the WHO recommendations…  </p>
+  
+<p> (INSERT FLIPPING CARDS) </p>
+  
+<p> The results are clear: Londoners average diet is richer in free sugars and fats than what it should be. </p>
 
 
-Let’s now see if this diet has a direct impact on the Londoners health. We specifically look at the prevalence of obesity and type-2 diabetes, two metabolic syndrome conditions strongly linked to food consumption habits.
-The data collected by the Active People Survey (APS) in 2012 among a statistical sample of borough residents indicate that:
--	37.4 % of Londoners are overweight
--	19.8 % of Londoners are obese
-(INSERT COUNTER FOR THESE TWO NUMBERS)
-So only 40 % of the londonian population has an “healthy weight” ! 
+<p> Let’s now see if this diet has a direct impact on the Londoners health. We specifically look at the prevalence of obesity and type-2 diabetes, two metabolic syndrome conditions strongly linked to food consumption habits.
+The data collected by the Active People Survey (APS) in 2012 among a statistical sample of borough residents indicate that: </p>
+<ul> 
+<li>	37.4 % of Londoners are overweight </li> 
+<li>	19.8 % of Londoners are obese </li> 
+</ul> 
+<p> (INSERT COUNTER FOR THESE TWO NUMBERS) </p>
+<p>So only 40 % of the londonian population has an “healthy weight” ! </p>
 
-To verify that the Londoners food habits is associated with an increased prevalence of metabolic disorders, we correlate diabetes, obesity and overweight prevalence among adults and children with the different food and nutrients categories that we have seen previously.
+<p> To verify that the Londoners food habits is associated with an increased prevalence of metabolic disorders, we correlate diabetes, obesity and overweight prevalence among adults and children with the different food and nutrients categories that we have seen previously. </p>
 
 {% include correlations.html %}
 
