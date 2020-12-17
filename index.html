@@ -3,20 +3,13 @@ layout: default
 title: Food (and money) for thought
 ---
 
-<div id = menu align="center">
-  <h2> <strong> ON THE MENU </strong> </h2>
-  <h3> <a href="index.html#entree"> THE "AMUSE BOUCHE" : What is the average diet of a Londoner? </a> </h3>
-  <h3> <a href="index.html#plat"> THE "ENTREE" : What constitutes a healthy diet? </a> </h3>
-  <h3> <a href="index.html#dessert" > THE "PLAT" : How wealth indicators and food expenditures differ between areas? </a> </h3>
-  <h3> <a href="index.html#bonbon"> THE "DESSERT" : How does the food diet relate on the area's wealth? </a> </h3>
-</div>
+{% include menu.html %}
 
-
-“An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases. 
-However, the price of the food products influences greatly the decisions of individuals in purchasing them or not. 
-There is a strong belief amongst consumers that more expensive products are healthier than cheaper ones. This belief was supported by a 2013 study from Harvard School of Public Health that found that eating a healthy diet cost about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change, but this represents an “extra” $2,200 per year for a family of four. 
+“An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases.
+However, the price of the food products influences greatly the decisions of individuals in purchasing them or not.
+There is a strong belief amongst consumers that more expensive products are healthier than cheaper ones. This belief was supported by a 2013 study from Harvard School of Public Health that found that eating a healthy diet cost about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change, but this represents an “extra” $2,200 per year for a family of four.
 So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life?
-We provide here insights on the food consumption discrepancies between different boroughs of Greater London and explore the link between the economic situations of households and their food purchases. 
+We provide here insights on the food consumption discrepancies between different boroughs of Greater London and explore the link between the economic situations of households and their food purchases.
 The datasets we used contain informations about incomes, children poverty and grocery purchases per borough of Greater London.
 
 <div id="entree">
@@ -24,7 +17,10 @@ The datasets we used contain informations about incomes, children poverty and gr
 </div>
 {% include piecharts.html %}
 
-<h2 id="plat"> What constitutes a healthy diet? </h2>
+<h2 id="plat"> What constitutes a healthy diet (according to WHO)? </h2>
+
+{% include cards.html %}
+
 
 {% include correlations.html %}
 

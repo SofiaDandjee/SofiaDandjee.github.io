@@ -1282,3 +1282,97 @@
 	text-align: center;
 	font-size: 2.5em;
 }
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back, .sugar, .fat, .saturated {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+	object-fit: contain;
+	text-align: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #ffd6d1;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.sugar {
+	background-image: url('../images/sugar.jpg');
+	background-size: contain;
+}
+
+.saturated {
+	background-image: url('../images/saturated.jpg');
+	background-size: contain;
+}
+
+.fat {
+	background-image: url('../images/fat.jpg');
+	background-size: contain;
+}
+
+.rotate {
+	transform: rotate(-45deg);
+	/* Safari */
+  -webkit-transform: rotate(-45deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-45deg);
+
+  /* IE */
+  -ms-transform: rotate(-45deg);
+
+  /* Opera */
+  -o-transform: rotate(-45deg);
+}
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+counter {
+  transition: --num 1s;
+  counter-reset: num var(--num);
+}
+counter:hover {
+  --num: 10000;
+}
+counter::after {
+  content: counter(num);
+}
