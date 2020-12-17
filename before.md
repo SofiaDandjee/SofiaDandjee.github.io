@@ -37,6 +37,6 @@ Keeping a good and balanced diet is fundamental to having a healthy life as it h
 
 {% include economicindicators_map.html %}
 
-{% include scatter3d_plot.html %}
+{% include scatter3d.html %}
 
 The detailed analysis of the project can be found <a href = "https://nbviewer.jupyter.org/github/SofiaDandjee/food_for_thought/blob/main/project.ipynb"> here </a>.
