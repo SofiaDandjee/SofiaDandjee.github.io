@@ -5,28 +5,102 @@ title: Food (and money) for thought
 
 {% include menu.html %}
 
-“An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases.
-However, the price of the food products influences greatly the decisions of individuals in purchasing them or not.
-There is a strong belief amongst consumers that more expensive products are healthier than cheaper ones. This belief was supported by a 2013 study from Harvard School of Public Health that found that eating a healthy diet cost about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change, but this represents an “extra” $2,200 per year for a family of four.
-So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life?
-We provide here insights on the food consumption discrepancies between different boroughs of Greater London and explore the link between the economic situations of households and their food purchases.
-The datasets we used contain informations about incomes, children poverty and grocery purchases per borough of Greater London.
+<p> “An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps
+  avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases. However, the price of the food products
+  influences greatly the decisions of individuals in purchasing them or not. There is a strong belief amongst consumers that more
+  expensive products are healthier than cheaper ones. This belief was supported by a 2013 study from Harvard School of Public Health
+  that found that eating a healthy diet costs about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change,
+  but this represents an “extra” $2,200 per year for a family of four. So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life? </p>
+
+<p> We provide here insights on the food consumption discrepancies between different boroughs of Greater London and explore the link
+  between the economic situations of households and their food purchases. The datasets we used contain informations about incomes,
+  children poverty and grocery purchases per borough of Greater London. </p>
+
 
 <div id="entree">
 <h2> What is the average diet of a Londoner? </h2>
 </div>
+
+<p> Let's start with a quick look at the Londoners food habits! </p>
+
+<p> To do this, we use food purchases data from the Tesco Grocery 1.0 dataset. It consists in a record of 420 M food items purchased by
+  1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015.
+  These data are aggregated at different spatial granularities (from Lower Super Output Areas (LSOA) to Boroughs) to preserve anonymity. </p>
+
+<p> But are these data really representative of the londonian food habits? Sounds good… First, Tesco is the market leader of groceries in the UK.
+  Then, we removed the areas where the Tesco food purchases data is not sufficiently representative of the food purchases of the area's population. </p>
+
+<p>  Let's select a category! </p>
+
 {% include piecharts.html %}
 
-<h2 id="plat"> What constitutes a healthy diet (according to WHO)? </h2>
+<p> It seems that Londoners have a diet rich in fats (especially saturated fats!) and carbohydrates (especially sugars!).
+If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
+  the top one food category! But the sweets seem to occupy an important part of the energy income. Grains and dairy come after,
+  yet quickly regained by ready made food… </p>
 
-{% include cards.html %}
+<h2 id="plat"> What constitutes a healthy diet ? </h2>
 
+<p><b> Do Londoners eat healthy? </b></p>
+
+<p>The exact make-up of a diversified, balanced and healthy diet will vary depending on individual characteristics (e.g. age, gender, lifestyle and degree of
+  physical activity), cultural context, locally available foods and dietary customs. However, the basic principles of what constitutes a healthy diet remain the same.
+  According to the <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet">World Health Organization</a>,
+  a healthy diet includes the following:
+  <li> fruit, vegetables, legumes, nuts and whole grains </li>
+  <li> at least 400 g of fruit and vegetables per day </li>
+  <li>	less than 10% of total energy intake from free sugars (ideally less than 5%) </li>
+  <li>	less than 30% of total energy intake from fats </li>
+  <li>	less than 10% of total energy intake from saturated fats </li>
+  <li>	less than 10% of total energy intake from trans-fats </li>
+  <li>	less than 5g of salt per day </li></p>
+
+<p> Let’s see if Londoners follow the WHO recommendations regarding free sugars, fats and saturated fats…
+  <li>INSERT FLIPPING CARDS</li>
+  The results are clear: Londoners average diet is richer in free sugars and fats than what it should be. </p>
+
+
+<p><b> How does Londoners diet relate to their health? </b></p>
+
+<p> Let’s now see if this diet has a direct impact on the Londoners health. We specifically look at the prevalence of obesity and type-2 diabetes,
+  two metabolic syndrome conditions strongly linked to food consumption habits.
+  The data collected by the Active People Survey (APS) in 2012 among a statistical sample of borough residents indicate that:
+  <li>	37.4 % of Londoners are overweight </li>
+  <li>	19.8 % of Londoners are obese </li>
+  So only 40 % of the londonian population has an “healthy weight” ! </p>
+
+<p> To verify that the Londoners food habits is associated with an increased prevalence of metabolic disorders, we correlate diabetes,
+  obesity and overweight prevalence among adults and children with the different food and nutrients categories that we have seen previously. </p>
 
 {% include correlations.html %}
 
+<p> For both food items and nutrients, the correlations are homogeneous for the obesity and overweight prevalence among children.
+Same for the obesity and overweight prevalence among adults. Diabetes prevalence has its own pattern of correlations. <br>
+Regarding nutrients, the most significative ones are the energy coming from fibres and alcohol (surprisingly) and the entropy of energy from nutrients,
+as they show strong negative correlations. The total energy and the energy from carbs and are also nicely positively correlated with the prevalence
+of obesity and overweight among adults. Finally, the diabetes prevalence is well correlated with almost all nutrients categories. <br>
+Regarding food items, we again find that alcohol (beer and wine) are negatively correlated with the metabolic disorders. Less surprising,
+fruits and vegetables and dairy seem to decrease the disorders prevalence. On the contrary, fats and oils are positively correlated with them. </p>
+
+<p><b> How do we measure the healthiness of a diet? </b></p>
+
+<p>I already hear you saying, what’s the point of all this?
+The point of all this analysis is that at the end, we can compare the healthiness of Londoners diet with some economic indicators as income and child poverty. So we need a diet score such that if the score is 1, the corresponding diet is diversified, balanced and healthy and respectively, if the score is 0, the corresponding diet is completely unhealthy.
+We found two ways to compute this score:
+<ol start="1" type="1">
+ <li>Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features </li>
+ <li>Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features </li>
+</ol></p>
+
+<i>Results for Score 1</i>
+
 <div align="center"> {% include barplots_score1.html %} </div>
 
+<i>Results for Score 2</i>
+
 <div align="center"> {% include barplots_score2.html %} </div>
+
+<i>Comparison, validation and selection</i>
 
 <div align="center"> {% include scatter2D.html %} </div>
 
@@ -36,7 +110,30 @@ The datasets we used contain informations about incomes, children poverty and gr
 
 <h2 id="dessert"> What is the proportion of food related expenditure in each borough? How does it relate to its economic situation? </h2>
 
+<p> After this more detailed view on the Londoner’s food diet and some metabolic syndrome conditions strongly correlated with food consumption habits,
+  let’s us interest now in some economic indicators. <b>Especially, how food expenditures are related to wealth? </b></p>
+
+<p> For that we used here the following datasets:
+<li> <a href="https://figshare.com/articles/dataset/Area-level_grocery_purchases/7796666?backTo=/collections/Tesco_Grocery_1_0/4769354">Earnings by Place of
+  Residence, Borough</a>: gross earnings of employees by place of residence. We only considered the full-time weekly earnings per borough in 2015. </li>
+<li> <a href="https://data.london.gov.uk/dataset/earnings-place-residence-borough">Children poverty, Borough</a>: numbers and percentages of children in
+  poverty for Borough and London Wards (at 31 August each year). We only considered the children (dependent children under the age of 20) in child benefit
+  families per borough in 2015. Therefore, the higher the value of the aid perceived, the more precarious the economic situation. </li>
+<li> <a href="https://data.london.gov.uk/dataset/london-consumer-expenditure-estimates-2011-2036">London Consumer Expenditure Estimates - Detailed Borough
+  Base</a>: consumer expenditure data to 2036 broken down by London borough. We transformed the data concerning food expenditure in percentage of the total
+  expenditure over the year 2015, per borough. </li></p>
+
+<p> We propose here a visualization of the wealth differences between the different boroughs through these three indicators: </p>
+
 {% include economicindicators_map.html %}
+
+<p> At first sight, earnings and child poverty seem to be strongly correlated in boroughs, as expected.
+
+Concerning the food expenditures, they appear to represent a more important part of the total expenditures in less wealthy areas, which is quite intuitive.
+  In fact, this is accordance with the Engel's law, an observation in economics stating that, as income rises, the proportion of income spent on food falls,
+  even if absolute expenditure on food rises.
+  However, you will now ask the following question: <b>is a healthier diet more expensive? </b></p>
+
 
 <h2 id ="bonbon"> How does a healthy diet relates to the borough's economic situation? Is this connection area-dependent? </h2>
 
