@@ -3,7 +3,11 @@ layout: default
 title: Food (and money) for thought
 ---
 
-<p> “An apple a day keeps the doctor away”. Keeping a good and balanced diet is fundamental to having a healthy life as it helps
+<div id="citation">
+  "An apple a day keeps the doctor away"
+</div>
+
+<p> Keeping a good and balanced diet is fundamental to having a healthy life as it helps
   avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases. However, the price of the food products
   influences greatly the decisions of individuals in purchasing them or not. Haven't you ever chosen a more expensive brand because
   you felt it was healthier? This belief was supported by a 2013 study from Harvard School of Public Health
@@ -26,16 +30,16 @@ title: Food (and money) for thought
     These data are aggregated at different spatial granularities (from Lower Super Output Areas, to Wards, to Boroughs) to preserve anonymity. </p>
 
   <div align="center"> {% include stats.html %} </div>
-  
- 
+
+
     <p><br> We also use the following datasets:
-    <li> <a href="https://data.london.gov.uk/dataset/prevalence-childhood-obesity-borough"> Prevalence of overweight and obese children</a>: fractions of overweight 
-      and obese primary school children in Reception class (aged 4 to 5) and year 6 (aged 10 to 11), sampled across wards. This data has been collected by 
+    <li> <a href="https://data.london.gov.uk/dataset/prevalence-childhood-obesity-borough"> Prevalence of overweight and obese children</a>: fractions of overweight
+      and obese primary school children in Reception class (aged 4 to 5) and year 6 (aged 10 to 11), sampled across wards. This data has been collected by
       the English National Health Service (NHS) in the 2013–2014 school year. </li>
-    <li> <a href="https://data.london.gov.uk/dataset/obesity-adults"> Prevalence of overweight and obese adults</a>: fractions of overweight 
+    <li> <a href="https://data.london.gov.uk/dataset/obesity-adults"> Prevalence of overweight and obese adults</a>: fractions of overweight
       and obese individuals among a statistical sample of borough residents. This data has been collected by the Active People Survey (APS) in 2012. </li>
    <li> <a href="https://digital.nhs.uk/data-and-information/publications/statistical/quality-and-outcomes-framework-achievement-prevalence-and-exceptions-
-     data/quality-and-outcomes-framework-qof-2016-17"> Diabetes prevalence</a>: fraction of adults among those registered 
+     data/quality-and-outcomes-framework-qof-2016-17"> Diabetes prevalence</a>: fraction of adults among those registered
      at a GP practice in England who are affected by type-2 diabetes. This data has been collected by the NHS for year 2015 at ward level. </li>
     <li> <a href="https://figshare.com/articles/dataset/Area-level_grocery_purchases/7796666?backTo=/collections/Tesco_Grocery_1_0/4769354">Earnings by place of
       residence</a>: gross earnings of employees by place of residence. We only considered the full-time weekly earnings per borough in 2015. </li>
@@ -52,31 +56,31 @@ title: Food (and money) for thought
   <h2> What is the average diet of a Londoner? </h2>
 </div>
 
+<div class="clearfix">
+  <div class="float-container">
+    <div class="float-child">
+      {% include piecharts.html %}
+    </div>
 
-<div class="float-container">
-  <div class="float-child">
-    {% include piecharts.html %}
-  </div>
+    <div class="float-child">
 
-  <div class="float-child">
-    
-      <p><br> Is the data really representative of the londonian food habits? It appears so… Indeed, Tesco was the biggest grocery retailer in UK in 2015, 
-        with 28% of market share. Moreover, we only take into account the areas where the Tesco food purchases data is sufficiently representative (representativeness > 10%) 
-        of the food purchases of the area's population.</p>
+        <p><br> Is the data really representative of the londonian food habits? It appears so… Indeed, Tesco was the biggest grocery retailer in UK in 2015,
+          with 28% of market share. Moreover, we only take into account the areas where the Tesco food purchases data is sufficiently representative (representativeness > 10%)
+          of the food purchases of the area's population.</p>
 
-     <p> Let's now have a look at the Londoners food habits! </p>
-    
-    <p> It seems that Londoners have a diet rich in fats (especially saturated fats) and carbohydrates (especially sugars).
-    If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
-      the top one food category. But sweets occupy an important part of the energy income.... Grains and dairy come after,
-      yet quickly regained by ready made food. </p>
+       <p> Let's now have a look at the Londoners food habits! </p>
+
+      <p> It seems that Londoners have a diet rich in fats (especially saturated fats) and carbohydrates (especially sugars).
+      If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
+        the top one food category. But sweets occupy an important part of the energy income.... Grains and dairy come after,
+        yet quickly regained by ready made food. </p>
+    </div>
   </div>
 </div>
 
-
 <h2 id="plat"> What constitutes a healthy diet? </h2>
 
-<p><h1 style="font-size:20px"><b> Do Londoners eat healthy ? </b></h1></p>
+<p> <h1 style="font-size:20px"><b> Do Londoners eat healthy ? </b></h1> </p>
 
 <p>The exact make-up of a diversified, balanced and healthy diet will vary depending on individual characteristics (e.g. age, gender, lifestyle and degree of
   physical activity), cultural context, locally available foods and dietary customs. However, the basic principles of what constitutes a healthy diet remain the same.
@@ -101,11 +105,11 @@ title: Food (and money) for thought
 
 <p> Let’s take the bull by the horns: does this average diet have a direct impact on the Londoners health? We specifically look at the prevalence of obesity and type-2 diabetes,
   two metabolic syndrome conditions strongly linked to food consumption habits.
-  The data collected by the APS in 2012 indicate that 37.4 % of Londoners are overweight and 19.8 %  are obese. 
+  The data collected by the APS in 2012 indicate that 37.4 % of Londoners are overweight and 19.8 %  are obese.
   So only about 40 % of the londonian population has a “healthy weight”!
 </p>
 
-<div align="center">{% include obesity.svg %}</div> 
+<div align="center">{% include obesity.svg %}</div>
 
 
 <p> To verify that the Londoners food habits are associated with an increased prevalence of metabolic disorders, we correlate diabetes,
@@ -115,31 +119,31 @@ title: Food (and money) for thought
 
 <p> For both food items and nutrients, the Spearman rank correlations are homogeneous for the obesity and overweight prevalence among children.
 Same for the obesity and overweight prevalence among adults. Diabetes prevalence has its own pattern of correlations. <br><br>
-  
+
 Regarding nutrients, we can see that the energy coming from fibres, the energy from alcohol (???) and the entropy of energy from nutrients,
 are strongly negatively correlated with all the metabolic syndromes considered. On the other hand, the total energy and the energy from carbs
-show nice positive correlations with the obesity and overweight prevalence among adults. Finally, the diabetes prevalence is well correlated with almost all 
+show nice positive correlations with the obesity and overweight prevalence among adults. Finally, the diabetes prevalence is well correlated with almost all
 nutrients categories. <br><br>
-  
+
 Regarding food items, we again find that alcohol (beer and wine) are negatively correlated with the metabolic disorders. Less surprising,
 fruits and vegetables and dairy seem to decrease the disorders prevalence. On the contrary, fats and oils increase them. </p>
 
 <p><h1 style="font-size:20px"><b> How do we measure the healthiness of a diet? </b></h1></p>
 
 <p>I already hear you thinking, what’s the point of all this?
-The point of all this analysis is that at the end, we can compare the healthiness of Londoners diet with the economic situations of households. 
-So we need a diet score such that if the score is 1, the corresponding diet is diversified, balanced and healthy and respectively, 
+The point of all this analysis is that at the end, we can compare the healthiness of Londoners diet with the economic situations of households.
+So we need a diet score such that if the score is 1, the corresponding diet is diversified, balanced and healthy and respectively,
   if the score is 0, the corresponding diet is completely unhealthy.
 We found two ways to compute this score: </p>
 
 <strong><u>Method 1:</strong></u>  Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
 
-<p>As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
-(capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population. 
-On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the 
+<p>As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients
+(capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population.
+On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the
 tendency to increase it.</p>
 
-<p>Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary 
+<p>Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary
 least squares regression.</p>
 
 <strong><u>Method 2:</strong></u> Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features. <br><br>
@@ -158,24 +162,24 @@ least squares regression.</p>
 </div>
 
 <p>To check the consistency of the computed scores, we compare the features repartition
-of the 25% lowest-scoring and of 25% highest-scoring areas. As you can see just above, the results are coherent. 
-Concerning score 1, the highest-scoring areas show a diet slightly richer in fibres 
-and entropy and poorer in carbohydrates than the lowest-score areas. Regarding score 2, the differences are even more significative. 
+of the 25% lowest-scoring and of 25% highest-scoring areas. As you can see just above, the results are coherent.
+Concerning score 1, the highest-scoring areas show a diet slightly richer in fibres
+and entropy and poorer in carbohydrates than the lowest-score areas. Regarding score 2, the differences are even more significative.
 The highest-scoring areas show a way bigger consumption of fruits and vegetables and of dairy and a smaller consumption of sweets and grains.</p>
 
-<p> But how can we be sure that the two scores we computed are well representative of the healthiness of the Londoners diet? We need to validate them 
+<p> But how can we be sure that the two scores we computed are well representative of the healthiness of the Londoners diet? We need to validate them
   using new data, that is...(drum roll)...data on diabetes prevalence, another food-related illness!</p>
 
-<p> As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information.  
+<p> As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information.
   This is confirmed by their visualization on the London map: they only exhibit slight differences. </p>
 
 <div class="float-container">
- 
+
 
   <div class="float-child">
-    <div align="center"> {% include scatter2D.html %} 
+    <div align="center"> {% include scatter2D.html %}
      </div>
-   
+
   </div>
 
   <div class="float-child">
@@ -183,13 +187,13 @@ The highest-scoring areas show a way bigger consumption of fruits and vegetables
       <br><br>
       <iframe frameborder="1" class="juxtapose" width="500" height="500" marginwidth="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
       </div>
-    
+
   </div>
 
 </div>
 
-<p> But what really interests us is now the correlation between each score and the estimated diabetes prevalence. 
-  It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes. 
+<p> But what really interests us is now the correlation between each score and the estimated diabetes prevalence.
+  It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes.
   But the score 1 seems to win… so we choose to keep it to the rest of the course! </p>
 
 
@@ -199,6 +203,10 @@ The highest-scoring areas show a way bigger consumption of fruits and vegetables
 <p> After this more detailed view on the Londoner’s food diet and some metabolic syndrome conditions strongly correlated with food consumption habits,
   let’s us interest now in some economic indicators. <b>Especially, how food expenditures are related to wealth? </b></p>
 
+{% include food_expenditures.html %}
+
+We can see that food is the 4st highest activity consumption behind housing, restaurants and hotels.
+
 <p> We propose here a visualization of the wealth differences between the different boroughs through these three indicators: </p>
 
 {% include economicindicators_map.html %}
@@ -206,16 +214,34 @@ The highest-scoring areas show a way bigger consumption of fruits and vegetables
 <p> At first sight, earnings and child poverty seem to be strongly correlated in boroughs, as expected.
 
   Concerning the food expenditures, they appear to represent a more important part of the total expenditures in poorer areas, which is quite intuitive.
-  In fact, this is in accordance with the <a href="https://en.wikipedia.org/wiki/Engel%27s_law"> Engel's law</a>, an observation in economics stating that, 
-  as income increases, the proportion of income spent on food decreases. However, you will now ask the following question: <b>is a healthier diet more expensive? </b></p>
+  In fact, this is in accordance with the <a href="https://en.wikipedia.org/wiki/Engel%27s_law"> Engel's law</a>, an observation in economics stating that,
+  as income increases, the proportion of income spent on food decreases. This effect is clearly visible with this dataset.
+  <div class="clearfix">
+    <div class="float-container">
 
+
+      <div class="float-child">
+        <div align="center"> {% include earnings_vs_food_relative.html %}
+         </div>
+
+      </div>
+
+      <div class="float-child">
+        <div align="center">
+          {% include earnings_vs_food_absolute.html %}
+          </div>
+
+      </div>
+
+    </div>
+  </div>
 
 <h2 id ="bonbon"> How does a healthy diet relates to the borough's economic situation? Is this connection area-dependent? </h2>
 
 <div class="float-container">
 
   <div class="float-child">
-    <p> The ancient Greek Herophilus was saying: "When health is absent... wealth becomes useless". For sure, but how are they related?
+
       The WHO asserts that the global food price crisis threatens public health and especially the health of the low-income families.
       But how does a healthy diet relate to the economic situation? </p>
 
@@ -229,6 +255,10 @@ The highest-scoring areas show a way bigger consumption of fruits and vegetables
 
   </div>
 
+</div>
+
+<div id="citation">
+  "When health is absent... wealth becomes useless" - Herophilus
 </div>
 
 <h2> References </h2>

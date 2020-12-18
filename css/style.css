@@ -146,7 +146,12 @@
 
 	p, ul, ol, dl, table, blockquote
 	{
-		margin-bottom: 2em;
+		margin-bottom: 1em;
+	}
+
+	li {
+		padding:0;
+		margin:0;
 	}
 
 	br.clear
@@ -266,7 +271,7 @@
 
 		ul.actions
 		{
-			margin-top: 2.5em;
+			margin-top: 0em;
 			clear: both;
 		}
 
@@ -1378,13 +1383,38 @@
     border: 0px solid #fff;
     padding: 0px;
 		align-items: center;
-		height: 600px;
+		position: relative;
+  	height: auto;
+  	min-height: 100% !important;
+
 }
 
 .float-child {
     width: 50%;
     float: left;
-
+		position: relative;
+  	height: auto;
+  	min-height: 100% !important;
     padding: 0px;
     border: 0px solid red;
+}
+
+#citation {
+	border: solid 0px #ed786a;
+	margin: auto;
+	width:100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	padding-left: 5px;
+	background-color: #ffffff;
+	font-size: 2.5em;
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
 }
