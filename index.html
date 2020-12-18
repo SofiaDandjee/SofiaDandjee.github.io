@@ -158,10 +158,14 @@ We found two ways to compute this score: </p>
 <i>Comparison, validation and selection</i>
 
 <div class="float-container">
+  
+Let’s now validate our model using  the data on diabetes prevalence.
 
   <div class="float-child">
     <div align="center"> {% include scatter2D.html %} </div>
   </div>
+As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information. 
+But what really interests us is now the correlation between each score and the estimated diabetes prevalence. It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes.
 
   <div class="float-child">
 
