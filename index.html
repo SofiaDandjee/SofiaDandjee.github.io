@@ -129,33 +129,23 @@ We found two ways to compute this score: </p>
 
 <strong>Method 1</strong> : Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
 
-<div class="float-container">
-  <div class="float-child">
-    <br>
-    
-    As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
-    (capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population. 
-    On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the 
-    tendency to increase it. <br><br>
-    
-    Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary 
-    least squares regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy and the entropy repartitions
-    of the 25% lowest-scoring and of 25% highest-scoring areas and the results are coherent.
+As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
+(capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population. 
+On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the 
+tendency to increase it. <br><br>
 
-  </div>
-
-  <div class="float-child">
-    <div align="right"> {% include barplots_score1.html %} </div>
-  </div>
-</div>
+Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary 
+least squares regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy and the entropy repartitions
+of the 25% lowest-scoring and of 25% highest-scoring areas and the results are coherent.
 
 <strong> Method 2 </strong> : Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features.
 
-<p>blablabla</p>
+Score 2 is computed the same way than score 1, except that we select as features the food items the most consumed by Londoners, that is: fruits and vegetables, sweets, grains and dairy. 
+
 
 <div class="float-container">
   <div class="float-child">
-    blablabla
+    <div align="center"> {% include barplots_score1.html %} </div>
   </div>
 
   <div class="float-child">
