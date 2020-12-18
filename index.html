@@ -167,8 +167,7 @@ We found two ways to compute this score: </p>
 
 <b> Comparison, validation and selection </b>
 
-Let’s now validate our model using the data on diabetes prevalence... 
-<br>
+<p> Let’s now validate our model using the data on diabetes prevalence... </p>
 
 <p> As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information.  
   This is confirmed by their visualization on the London map: they only exhibit slight differences. </p>
@@ -179,7 +178,10 @@ Let’s now validate our model using the data on diabetes prevalence...
   <div class="float-child">
     <div align="center"> {% include scatter2D.html %} 
      </div>
-   
+   <p> But what really interests us is now the correlation between each score and the estimated diabetes prevalence. 
+  It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes. 
+  But the score 1 seems to win… so we choose to keep it to the rest of the course! </p>
+
   </div>
 
   <div class="float-child">
@@ -189,9 +191,6 @@ Let’s now validate our model using the data on diabetes prevalence...
       </div>
     
   </div>
-<p> But what really interests us is now the correlation between each score and the estimated diabetes prevalence. 
-  It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes. 
-  But the score 1 seems to win… so we choose to keep it to the rest of the course! </p>
 
 </div>
 
