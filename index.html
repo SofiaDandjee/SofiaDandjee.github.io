@@ -126,32 +126,41 @@ So we need a diet score such that if the score is 1, the corresponding diet is d
   if the score is 0, the corresponding diet is completely unhealthy.
 We found two ways to compute this score: </p>
 
-<div class="float-container">
+<strong>Method 1</strong> : Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
+    
+As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
+(capturing the diversity of nutrients in the total energy intake) seem to significantly reduce the obesity and overweight prevalence among the population. 
+On the other hand, the energy coming from carbohydrates (associated with processed or refined foods made from plants, including sweets, soft drinks, breads,
+pastas and breakfast cereals…) has a "positive” impact on the obesity and overweight prevalence. <br><br>
 
+To build stronger evidence that these three nutrients are directly linked to food-related illnesses, we run an ordinary least squares regression.
+The regression aims at predicting the prevalence of obesity and overweight from the three explanatory variables that are: energy from fibres, 
+energy from carbohydrates and entropy of energy from nutrients.<br><br>
+
+<div class="float-container">
   <div class="float-child">
-    <strong>Method 1</strong> : Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
-    
-    As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
-    (capturing the diversity of nutrients in the total energy intake) seem to significantly reduce the obesity and overweight prevalence among the population. 
-    On the other hand, the energy coming from carbohydrates (associated with processed or refined foods made from plants, including sweets, soft drinks, breads,
-    pastas and breakfast cereals…) has a "positive” impact on the obesity and overweight prevalence. <br><br>
-    
-    To build stronger evidence that these three nutrients are directly linked to food-related illnesses, we run an ordinary least squares regression.
-    The regression aims at predicting the prevalence of obesity and overweight from the three explanatory variables that are: energy from fibres, 
-    energy from carbohydrates and entropy of energy from nutrients.<br><br>
-    
     Score 1 simply consists in a weighted sum, permitting to combine our three inputs into one number. More precisely, the weights correspond to the 
     coefficients found during the linear regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy
     and the entropy repartitions of the 25% lowest-scoring and of 25% highest-scoring areas.<br><br>
-
-    <div align="center"> {% include barplots_score1.html %} </div>
   </div>
 
   <div class="float-child">
-    <strong> Method 2 </strong> : Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features.
-    <div align="center"> {% include barplots_score2.html %} </div>
+    <div align="right"> {% include barplots_score1.html %} </div>
+  </div>
+</div>
+
+<strong> Method 2 </strong> : Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features.
+
+blablabla
+
+<div class="float-container">
+  <div class="float-child">
+    blablabla
   </div>
 
+  <div class="float-child">
+    <div align="center"> {% include barplots_score2.html %} </div>
+  </div>
 </div>
 
 
