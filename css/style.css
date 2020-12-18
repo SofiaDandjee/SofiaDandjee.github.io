@@ -1403,6 +1403,12 @@
     border: 0px solid red;
 }
 
+.float-child h2{
+    text-align: center;
+		padding: 0px;
+		margin: 0px;
+}
+
 #citation {
 	border: solid 0px #ed786a;
 	margin: auto;
