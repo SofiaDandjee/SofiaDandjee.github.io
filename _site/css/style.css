@@ -1388,8 +1388,9 @@
     padding: 0px;
 		align-items: center;
 		position: relative;
-  	height: auto;
-  	min-height: 100% !important;
+		display: flex;
+    width:100%;
+    height:100%;
 
 }
 
@@ -1397,8 +1398,6 @@
     width: 50%;
     float: left;
 		position: relative;
-  	height: auto;
-  	min-height: 100% !important;
     padding: 0px;
     border: 0px solid red;
 }
