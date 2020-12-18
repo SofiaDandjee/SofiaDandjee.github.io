@@ -3,31 +3,35 @@ layout: default
 title: Food (and money) for thought
 ---
 
+<<<<<<< HEAD
 <div id="citation">
   "An apple a day keeps the doctor away"
 </div>
 
 <p> Keeping a good and balanced diet is fundamental to having a healthy life as it helps
+=======
+<p style="font-size: 19px"> Keeping a good and balanced diet is fundamental to having a healthy life as it helps
+>>>>>>> 01b05795c7c1600f97b6088bdea4c83b4c120beb
   avoiding food-related illnesses such as diabetes, obesity and cardiovascular diseases. However, the price of the food products
   influences greatly the decisions of individuals in purchasing them or not. Haven't you ever chosen a more expensive brand because
-  you felt it was healthier? This belief was supported by a 2013 study from Harvard School of Public Health
-  that found that eating a healthy diet costs about $1.5 more per day per person than eating an healthy diet. Sounds like a pocket change,
-  but this represents an extra $2,200 per year for a family of four. So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life? </p>
+  you felt it was healthier? This belief is supported by a 2013 study from <a href="https://bmjopen.bmj.com/content/3/12/e004277.full?sid=820d6e1a-280e-47a6-b8c5-
+    498bfa4657e3"> Harvard School of Public Health</a> that found that eating a healthy diet costs about $1.5 more per day per person than eating an healthy diet.
+  Sounds like a pocket change, but this represents an extra $2,200 per year for a family of four. So, do people have an equal chance in maintaining a nutritious diet and thus a healthy life? </p>
 
-<p> We provide here an insight on the food consumption discrepancies between different boroughs of Greater London and explore the link
-  between the economic situations of households and their food purchases. The datasets we used contain informations about grocery purchases, incomes and
+<p style="font-size: 19px"> We provide here an insight on the food consumption discrepancies between different boroughs of Greater London and explore the link
+  between the economic situations of households and their food purchases. The datasets we use contain informations about grocery purchases, incomes and
   child poverty per borough of Greater London. </p>
 
-<br>
+<br><br>
 {% include menu.html %}
-<br>
+<br><br><br>
 
 <div id="data">
   <h2> The tastiest of ingredients: <strong> the data </strong> </h2>
 
   <p> Let's first present the Tesco Grocery 1.0 dataset from which we get the food purchases data. It consists in a record of 420 M food items purchased by
     1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015.
-    These data are aggregated at different spatial granularities (from Lower Super Output Areas, to Wards, to Boroughs) to preserve anonymity. </p>
+    These data are aggregated at different spatial granularities (from Lower Super Output Areas to Boroughs) to preserve anonymity. </p>
 
   <div align="center"> {% include stats.html %} </div>
 
@@ -64,6 +68,7 @@ title: Food (and money) for thought
 
     <div class="float-child">
 
+<<<<<<< HEAD
         <p><br> Is the data really representative of the londonian food habits? It appears so… Indeed, Tesco was the biggest grocery retailer in UK in 2015,
           with 28% of market share. Moreover, we only take into account the areas where the Tesco food purchases data is sufficiently representative (representativeness > 10%)
           of the food purchases of the area's population.</p>
@@ -75,6 +80,20 @@ title: Food (and money) for thought
         the top one food category. But sweets occupy an important part of the energy income.... Grains and dairy come after,
         yet quickly regained by ready made food. </p>
     </div>
+=======
+  <div class="float-child">
+
+      <p><br><br> Is the data really representative of the londonian food habits? It appears so… Indeed, Tesco was the biggest grocery retailer in UK in 2015,
+        with 28% of market share. Moreover, we only take into account the areas where the Tesco food purchases data is sufficiently representative (representativeness > 10%)
+        of the food purchases of the area's population.</p>
+
+     <p> Let's now have a look at the Londoners food habits! </p>
+
+    <p> It seems that Londoners have a diet rich in fats (especially saturated fats) and carbohydrates (especially sugars).
+    If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
+      the top one food category. But sweets occupy an important part of the energy income.... Grains and dairy come after,
+      yet quickly regained by ready made food. </p>
+>>>>>>> 01b05795c7c1600f97b6088bdea4c83b4c120beb
   </div>
 </div>
 
@@ -98,7 +117,7 @@ title: Food (and money) for thought
 
 <div align="center"> {% include cards.html %} </div>
 
-<p>The results are clear: Londoners average diet is way richer in free sugars and fats than what it should be. <br></p>
+<p><br>The results are clear: Londoners average diet is way richer in free sugars and fats than what it should be. <br><br></p>
 
 
 <p><h1 style="font-size:20px"><b> How does Londoners diet relate to their health? </b></h1></p>
@@ -112,7 +131,7 @@ title: Food (and money) for thought
 <div align="center">{% include obesity.svg %}</div>
 
 
-<p> To verify that the Londoners food habits are associated with an increased prevalence of metabolic disorders, we correlate diabetes,
+<p><br> To verify that the Londoners food habits are associated with an increased prevalence of metabolic disorders, we correlate diabetes,
   obesity and overweight prevalence among adults and children with the different nutrients and food categories that we have seen previously. </p>
 
 {% include correlations.html %}
@@ -170,16 +189,13 @@ The highest-scoring areas show a way bigger consumption of fruits and vegetables
 <p> But how can we be sure that the two scores we computed are well representative of the healthiness of the Londoners diet? We need to validate them
   using new data, that is...(drum roll)...data on diabetes prevalence, another food-related illness!</p>
 
-<p> As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information.
+<p> As you can see, the two scores are strongly correlated, which enables to assume that both roughly capture the same information.
   This is confirmed by their visualization on the London map: they only exhibit slight differences. </p>
 
 <div class="float-container">
-
-
   <div class="float-child">
     <div align="center"> {% include scatter2D.html %}
      </div>
-
   </div>
 
   <div class="float-child">
@@ -187,21 +203,17 @@ The highest-scoring areas show a way bigger consumption of fruits and vegetables
       <br><br>
       <iframe frameborder="1" class="juxtapose" width="500" height="500" marginwidth="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
       </div>
-
   </div>
-
 </div>
 
-<p> But what really interests us is now the correlation between each score and the estimated diabetes prevalence.
+<p> But what really interests us is the correlation between each score and the estimated diabetes prevalence.
   It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes.
-  But the score 1 seems to win… so we choose to keep it to the rest of the course! </p>
-
-
+  But the score 1 seems to win… so we choose to keep it to the rest of the story! </p>
 
 <h2 id="dessert"> What is the proportion of food related expenditure in each borough? How does it relate to its economic situation? </h2>
 
 <p> After this more detailed view on the Londoner’s food diet and some metabolic syndrome conditions strongly correlated with food consumption habits,
-  let’s us interest now in some economic indicators. <b>Especially, how food expenditures are related to wealth? </b></p>
+  let’s interest us now in some economic indicators. <b>Especially, how food expenditures are related to wealth? </b></p>
 
 {% include food_expenditures.html %}
 
@@ -209,7 +221,7 @@ We can see that food is the 4st highest activity consumption behind housing, res
 
 <p> We propose here a visualization of the wealth differences between the different boroughs through these three indicators: </p>
 
-{% include economicindicators_map.html %}
+<div align="center">{% include economicindicators_map.html %}</div>
 
 <p> At first sight, earnings and child poverty seem to be strongly correlated in boroughs, as expected.
 
@@ -247,7 +259,7 @@ We can see that food is the 4st highest activity consumption behind housing, res
 
       <p> Here, it clearly appears again that the higher the earnings and the lower the child poverty, the lower the proportion of food expenditures.
       But more important here, the higher the earnings and the lower the child poverty, the higher the healthy diet score.
-      So it would be a reasonable thing to think that a healthy diet is clearly positively correlated to the borough’s economic situation. </p>
+      So it would be reasonable to think that a healthy diet is clearly positively correlated to the borough’s economic situation. </p>
   </div>
 
   <div class="float-child">
@@ -260,8 +272,6 @@ We can see that food is the 4st highest activity consumption behind housing, res
 <div id="citation">
   "When health is absent... wealth becomes useless" - Herophilus
 </div>
-
-<h2> References </h2>
 
 The detailed analysis of the project can be found <a href = "https://nbviewer.jupyter.org/github/SofiaDandjee/food_for_thought/blob/main/project.ipynb"> here </a>.
 
