@@ -133,19 +133,17 @@ We found two ways to compute this score: </p>
   <div class="float-child">
     As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
     (capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population. 
-    On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads,
-    pastas…) has a "positive” impact on the obesity and overweight prevalence.<br>
+    On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the 
+    tendency to increase it. <br><br>
     
-    To build stronger evidence that these nutrients are directly linked to food-related illnesses, we run an ordinary least squares regression.
-    More precisely, the regression aims at predicting the prevalence of obesity and overweight from the three explanatory variables selected.<br>
-    
-    Score 1 simply consists in a weighted sum that permits to combine our three inputs into one number, with the weights simply corresponding to the 
-    coefficients found during the linear regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy
-    and the entropy repartitions of the 25% lowest-scoring and of 25% highest-scoring areas.
+    Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary 
+    least squares regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy and the entropy repartitions
+    of the 25% lowest-scoring and of 25% highest-scoring areas.
+
   </div>
 
   <div class="float-child">
-    <br><br>
+    <br>
     <div align="right"> {% include barplots_score1.html %} </div>
   </div>
 </div>
