@@ -23,7 +23,7 @@ title: Food (and money) for thought
     1.6 M fidelity card owners who shopped at the 411 Tesco stores within the boundaries of Greater London during the entire year of 2015.
     These data are aggregated at different spatial granularities (from Lower Super Output Areas, to Wards, to Boroughs) to preserve anonymity. </p>
 
-{% include stats.html %}
+  <div align="center"> {% include stats.html %} </div>
   
     <p> We also use the following datasets:
     <li> <a href="https://data.london.gov.uk/dataset/prevalence-childhood-obesity-borough"> Prevalence of overweight and obese children</a>: fractions of overweight 
@@ -89,8 +89,9 @@ title: Food (and money) for thought
 
 <p> Let’s see if Londoners follow the WHO recommendations regarding free sugars, fats and saturated fats…
 
-  {% include cards.html %}
-  The results are clear: Londoners average diet is way richer in free sugars and fats than what it should be. </p>
+<div align="center"> {% include cards.html %} </div>
+
+The results are clear: Londoners average diet is way richer in free sugars and fats than what it should be. </p>
 
 
 <p><b> How does Londoners diet relate to their health? </b></p>
@@ -101,7 +102,7 @@ title: Food (and money) for thought
   So only about 40 % of the londonian population has a “healthy weight”!
 </p>
 
-{% include obesity.svg %}
+<div align="center">{% include obesity.svg %}</div> 
 
 
 <p> To verify that the Londoners food habits are associated with an increased prevalence of metabolic disorders, we correlate diabetes,
@@ -127,21 +128,21 @@ So we need a diet score such that if the score is 1, the corresponding diet is d
 We found two ways to compute this score: </p>
 
 <strong>Method 1</strong> : Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
-    
-<p>As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
-(capturing the diversity of nutrients in the total energy intake) seem to significantly reduce the obesity and overweight prevalence among the population. 
-On the other hand, the energy coming from carbohydrates (associated with processed or refined foods made from plants, including sweets, soft drinks, breads,
-pastas and breakfast cereals…) has a "positive” impact on the obesity and overweight prevalence. </p>
 
 <div class="float-container">
   <div class="float-child">
+    As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
+    (capturing the diversity of nutrients in the total energy intake) seem to significantly reduce the obesity and overweight prevalence among the population. 
+    On the other hand, the energy coming from carbohydrates (associated with processed or refined foods made from plants, including sweets, soft drinks, breads,
+    pastas and breakfast cereals…) has a "positive” impact on the obesity and overweight prevalence.<br><br>
+    
     To build stronger evidence that these three nutrients are directly linked to food-related illnesses, we run an ordinary least squares regression.
    The regression aims at predicting the prevalence of obesity and overweight from the three explanatory variables that are: energy from fibres, 
     energy from carbohydrates and entropy of energy from nutrients.<br><br>
     
     Score 1 simply consists in a weighted sum, permitting to combine our three inputs into one number. More precisely, the weights correspond to the 
     coefficients found during the linear regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy
-    and the entropy repartitions of the 25% lowest-scoring and of 25% highest-scoring areas.<br><br>
+    and the entropy repartitions of the 25% lowest-scoring and of 25% highest-scoring areas.
   </div>
 
   <div class="float-child">
