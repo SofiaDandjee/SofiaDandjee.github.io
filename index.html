@@ -73,8 +73,7 @@ title: Food (and money) for thought
 
 <h2 id="plat"> What constitutes a healthy diet ? </h2>
 
-<h1 style="font-size:20px"
-    <p><b> Do Londoners eat healthy? </b></p> </h1>
+<h1 style="font-size:20px"><b> Do Londoners eat healthy ? </b></h1>
 
 <p>The exact make-up of a diversified, balanced and healthy diet will vary depending on individual characteristics (e.g. age, gender, lifestyle and degree of
   physical activity), cultural context, locally available foods and dietary customs. However, the basic principles of what constitutes a healthy diet remain the same.
@@ -95,7 +94,7 @@ title: Food (and money) for thought
 The results are clear: Londoners average diet is way richer in free sugars and fats than what it should be. </p>
 
 
-<p><b> How does Londoners diet relate to their health? </b></p>
+<h1 style="font-size:20px"><b> How does Londoners diet relate to their health? </b></h1>
 
 <p> Let’s take the bull by the horns: does this average diet have a direct impact on the Londoners health? We specifically look at the prevalence of obesity and type-2 diabetes,
   two metabolic syndrome conditions strongly linked to food consumption habits.
@@ -120,7 +119,7 @@ nutrients categories. <br>
 Regarding food items, we again find that alcohol (beer and wine) are negatively correlated with the metabolic disorders. Less surprising,
 fruits and vegetables and dairy seem to decrease the disorders prevalence. On the contrary, fats and oils increase them. </p>
 
-<p><b> How do we measure the healthiness of a diet? </b></p>
+<h1 style="font-size:20px"><b> How do we measure the healthiness of a diet? </b></h1>
 
 <p>I already hear you thinking, what’s the point of all this?
 The point of all this analysis is that at the end, we can compare the healthiness of Londoners diet with the economic situations of households. 
@@ -128,21 +127,20 @@ So we need a diet score such that if the score is 1, the corresponding diet is d
   if the score is 0, the corresponding diet is completely unhealthy.
 We found two ways to compute this score: </p>
 
-<strong>Method 1</strong> : Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
+<strong><u>Method 1:</strong></u>  Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
 
-As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
+<p>As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients 
 (capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population. 
 On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the 
-tendency to increase it. <br><br>
+tendency to increase it.</p>
 
-Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary 
-least squares regression. To check the consistency of the computed score, we compare the carbohydrates energy, fibres energy and the entropy repartitions
-of the 25% lowest-scoring and of 25% highest-scoring areas and the results are coherent.
+<p>Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary 
+least squares regression.</p>
 
-<strong> Method 2 </strong> : Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features.
+<strong><u>Method 2:</strong></u> Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features.
 
-Score 2 is computed the same way than score 1, except that we select as features the food items the most consumed by Londoners, that is: fruits and vegetables, sweets, grains and dairy. 
-
+<p>Score 2 is computed the same way than score 1, except that we select as features the food items the most consumed by Londoners:
+  fruits and vegetables, sweets, grains and dairy. </p>
 
 <div class="float-container">
   <div class="float-child">
@@ -154,8 +152,11 @@ Score 2 is computed the same way than score 1, except that we select as features
   </div>
 </div>
 
+<p>To check the consistency of the computed scores, we compare the features repartitions
+of the 25% lowest-scoring and of 25% highest-scoring areas and as you can see, the results are coherent.</p>
 
-<b> Comparison, validation and selection </b>
+
+<strong><u>Comparison, validation and selection:</strong></u>
 
 <p> Let’s now validate our model using the data on diabetes prevalence... </p>
 
