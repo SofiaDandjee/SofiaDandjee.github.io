@@ -1062,6 +1062,8 @@
 			font-family: 'Arvo';
 			font-weight: 700;
 			color: #ed786a;
+			position: relative;
+			top:30%;
 			text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
 		}
 
@@ -1292,6 +1294,7 @@
 	top:50%;
 	height:150px;
 	width:150px;
+	align-content: center;
 
 }
 
@@ -1301,6 +1304,7 @@
 
 .flip-card {
   background-color: transparent;
+	border-radius: 10%;
   width: 300px;
   height: 200px;
   border: 1px solid #f1f1f1;
@@ -1367,8 +1371,7 @@
 	text-align: center;
 	margin: 0;
   position: absolute;
-  top: 50%;
-
+	top:10%;
 }
 
 @property --num {
