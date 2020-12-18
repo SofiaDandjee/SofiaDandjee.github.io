@@ -166,20 +166,29 @@ pastas and breakfast cereals…) has a "positive” impact on the obesity and ov
 
 <i>Comparison, validation and selection</i>
 
+Let’s now validate our model using the data on diabetes prevalence...
+
+
+As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information.  This is confirmed by their visualization on the London map: they only exhibit slight differences.
+
+But what really interests us is now the correlation between each score and the estimated diabetes prevalence. It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes.
+
 <div class="float-container">
-  
-Let’s now validate our model using  the data on diabetes prevalence.
+ 
 
   <div class="float-child">
-    <div align="center"> {% include scatter2D.html %} </div>
+    <div align="center"> {% include scatter2D.html %} 
+    As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information.  
+    This is confirmed by their visualization on the London map: they only exhibit slight differences. </div>
+
   </div>
-As you can see, the two scores are strongly correlated, which enables to confirm that both roughly capture the same information. 
-But what really interests us is now the correlation between each score and the estimated diabetes prevalence. It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes.
 
   <div class="float-child">
 
     <div align="center">
       <iframe frameborder="1" class="juxtapose" width="500" height="500" marginwidth="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
+    But what really interests us is now the correlation between each score and the estimated diabetes prevalence. 
+      It appears that both scores are strongly correlated with diabetes prevalence, and as expected, the lower the score, the higher the vulnerability to diabetes.
     </div>
   </div>
 
