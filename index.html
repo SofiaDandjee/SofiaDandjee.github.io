@@ -78,22 +78,7 @@ title: Food (and money) for thought
     </div>
 
 </div>
-
-
-  <div class="float-child">
-
-      <p><br><br> Is the data really representative of the londonian food habits? It appears so… Indeed, Tesco was the biggest grocery retailer in UK in 2015,
-        with 28% of market share. Moreover, we only take into account the areas where the Tesco food purchases data is sufficiently representative (representativeness > 10%)
-        of the food purchases of the area's population.</p>
-
-     <p> Let's now have a look at the Londoners food habits! </p>
-
-    <p> It seems that Londoners have a diet rich in fats (especially saturated fats) and carbohydrates (especially sugars).
-    If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
-      the top one food category. But sweets occupy an important part of the energy income.... Grains and dairy come after,
-      yet quickly regained by ready made food. </p>
-
-  </div>
+</div>
 
 
 
@@ -125,7 +110,7 @@ title: Food (and money) for thought
 <p> Let’s take the bull by the horns: does this average diet have a direct impact on the Londoners health? We specifically look at the prevalence of obesity and type-2 diabetes,
   two metabolic syndrome conditions strongly linked to food consumption habits.
   The data collected by the APS in 2012 indicate that 37.4 % of Londoners are overweight and 19.8 %  are obese.
-  So only about 40 % of the londonian population has a “healthy weight”! However, this
+  So only about 40 % of the londonian population has a “healthy weight”! However, those statistics can be taken with a grain of salt as they come from a lower number of samples.
 </p>
 
 <div align="center">{% include obesity.svg %}</div>
@@ -172,16 +157,36 @@ least squares regression.</p>
 
 <div class="float-container">
   <div class="float-child">
+    <!-- <strong><u>Method 1:</strong></u>  Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features. <br><br>
+
+    <p>As we have seen previously, the energy coming from fibres (that is cereals, nuts, peas, beans, pulses…) and the entropy of energy from nutrients
+    (capturing the diversity of nutrients in the total energy) seem to significantly reduce the obesity and overweight prevalence among the population.
+    On the other hand, the energy from carbohydrates (associated with processed foods made from plants as sweets, soft drinks, breads, pastas…) has the
+    tendency to increase it.</p>
+
+    <p>Score 1 simply consists in a weighted sum of these three nutrients, with the weights corresponding to the coefficients obtained by running an ordinary
+    least squares regression.</p> -->
     <div align="center"> {% include barplots_score1.html %} </div>
   </div>
 
   <div class="float-child">
+    <!-- <strong><u>Method 2:</strong></u> Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features. <br><br>
+
+    Those most consumed categories are fruits and vegetables (27.8%), sweets (16.1%) - which also include cakes and biscuits, grains (15%) - which include
+    rice, corn and wheat and dairy (10.5%) which correspond to cheese, milk or yoghurt for example.
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Score 2 is computed in the same way as score 1. The coefficients correspond this time to the proportion of those categories.  </p>
+    <br> -->
     <div align="center"> {% include barplots_score2.html %} </div>
   </div>
 </div>
 
 <p>To check the consistency of the computed scores, we compare the features repartition
-of the 25% lowest-scoring and of 25% highest-scoring areas. As you can see just above, the results are coherent.
+of the 25% lowest-scoring and of 25% highest-scoring areas. As you can see just above, the results are realistic.
 Concerning score 1, the highest-scoring areas show a diet slightly richer in fibres
 and entropy and poorer in carbohydrates than the lowest-score areas. Regarding score 2, the differences are even more significative.
 The highest-scoring areas show a way bigger consumption of fruits and vegetables and of dairy and a smaller consumption of sweets and grains.</p>

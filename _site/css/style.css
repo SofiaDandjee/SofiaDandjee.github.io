@@ -1398,7 +1398,8 @@
     width: 50%;
     float: left;
 		position: relative;
-    padding: 0px;
+    padding-left: 3px;
+		padding-right: 3px;
     border: 0px solid red;
 }
 
