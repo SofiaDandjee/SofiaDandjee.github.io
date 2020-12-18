@@ -1374,19 +1374,17 @@
 	top:10%;
 }
 
-@property --num {
-  syntax: '<integer>';
-  initial-value: 0;
-  inherits: false;
+.float-container {
+    border: 0px solid #fff;
+    padding: 0px;
+		align-items: center;
+		height: 600px;
 }
 
-counter {
-  transition: --num 1s;
-  counter-reset: num var(--num);
-}
-counter:hover {
-  --num: 10000;
-}
-counter::after {
-  content: counter(num);
+.float-child {
+    width: 50%;
+    float: left;
+
+    padding: 0px;
+    border: 0px solid red;
 }

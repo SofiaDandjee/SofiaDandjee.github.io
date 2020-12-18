@@ -40,21 +40,29 @@ title: Food (and money) for thought
   <h2> What is the average diet of a Londoner? </h2>
 </div>
 
-<p> Let's start with a quick look at the Londoners food habits! </p>
 
-<p> But is the data really representative of the londonian food habits? Sounds good… First, Tesco is the market leader of groceries in the UK.
-  Then, we removed the areas where the Tesco food purchases data is not sufficiently representative of the food purchases of the area's population.</p>
+<div class="float-container">
 
+  <div class="float-child">
+    {% include piecharts.html %}
+  </div>
 
+  <div class="float-child">
 
-<p>  Let's select a category! </p>
+    <p> Let's start with a quick look at the Londoners food habits! </p>
 
-{% include piecharts.html %}
+    <p> But is the data really representative of the londonian food habits? Sounds good… First, Tesco is the market leader of groceries in the UK.
+      Then, we removed the areas where the Tesco food purchases data is not sufficiently representative of the food purchases of the area's population.</p>
 
-<p> It seems that Londoners have a diet rich in fats (especially saturated fats!) and carbohydrates (especially sugars!).
-If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
-  the top one food category! But the sweets seem to occupy an important part of the energy income. Grains and dairy come after,
-  yet quickly regained by ready made food… </p>
+    <p>  Let's select a category! </p>
+    <p> It seems that Londoners have a diet rich in fats (especially saturated fats!) and carbohydrates (especially sugars!).
+    If we now look at the most represented food categories, at first sight, one may be satisfied to find fruits and vegetables as
+      the top one food category! But the sweets seem to occupy an important part of the energy income. Grains and dairy come after,
+      yet quickly regained by ready made food… </p>
+  </div>
+
+</div>
+
 
 <h2 id="plat"> What constitutes a healthy diet ? </h2>
 
@@ -107,26 +115,39 @@ fruits and vegetables and dairy seem to decrease the disorders prevalence. On th
 <p>I already hear you saying, what’s the point of all this?
 The point of all this analysis is that at the end, we can compare the healthiness of Londoners diet with some economic indicators as income and child poverty. So we need a diet score such that if the score is 1, the corresponding diet is diversified, balanced and healthy and respectively, if the score is 0, the corresponding diet is completely unhealthy.
 We found two ways to compute this score:
-<ol start="1" type="1">
- <li>Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features </li>
- <li>Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features </li>
-</ol></p>
 
-<i>Results for Score 1</i>
+<div class="float-container">
 
-<div align="center"> {% include barplots_score1.html %} </div>
+  <div class="float-child">
+    <strong>Method 1</strong> : Fit a linear regression on the overweight and obesity prevalence datasets with their highest correlated nutrients as features.
+    <div align="center"> {% include barplots_score1.html %} </div>
+  </div>
 
-<i>Results for Score 2</i>
+  <div class="float-child">
+    <strong> Method 2 </strong> : Fit a linear regression on the overweight and obesity prevalence datasets with the most consumed food items as features.
+    <div align="center"> {% include barplots_score2.html %} </div>
+  </div>
 
-<div align="center"> {% include barplots_score2.html %} </div>
+</div>
+
 
 <i>Comparison, validation and selection</i>
 
-<div align="center"> {% include scatter2D.html %} </div>
+<div class="float-container">
 
-<div align="center">
-  <iframe frameborder="1" class="juxtapose" width="500" height="500" marginwidth="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
+  <div class="float-child">
+    <div align="center"> {% include scatter2D.html %} </div>
+  </div>
+
+  <div class="float-child">
+
+    <div align="center">
+      <iframe frameborder="1" class="juxtapose" width="500" height="500" marginwidth="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=539588b2-3f8c-11eb-83c8-ebb5d6f907df"></iframe>
+    </div>
+  </div>
+
 </div>
+
 
 <h2 id="dessert"> What is the proportion of food related expenditure in each borough? How does it relate to its economic situation? </h2>
 
@@ -147,15 +168,24 @@ Concerning the food expenditures, they appear to represent a more important part
 
 <h2 id ="bonbon"> How does a healthy diet relates to the borough's economic situation? Is this connection area-dependent? </h2>
 
-<p> The ancient Greek Herophilus was saying: "When health is absent... wealth becomes useless". For sure, but how are they related?
-  The WHO asserts that the global food price crisis threatens public health and especially the health of the low-income families.
-  But how does a healthy diet relate to the economic situation? </p>
+<div class="float-container">
 
-<div align="center"> {% include scatter3d.html %} </div>
+  <div class="float-child">
+    <p> The ancient Greek Herophilus was saying: "When health is absent... wealth becomes useless". For sure, but how are they related?
+      The WHO asserts that the global food price crisis threatens public health and especially the health of the low-income families.
+      But how does a healthy diet relate to the economic situation? </p>
 
-<p> Here, it clearly appears again that the higher the earnings and the lower the child poverty, the lower the proportion of food expenditures.
-But more important here, the higher the earnings and the lower the child poverty, the higher the healthy diet score.
-So it would be a reasonable thing to think that a healthy diet is clearly positively correlated to the borough’s economic situation. </p>
+      <p> Here, it clearly appears again that the higher the earnings and the lower the child poverty, the lower the proportion of food expenditures.
+      But more important here, the higher the earnings and the lower the child poverty, the higher the healthy diet score.
+      So it would be a reasonable thing to think that a healthy diet is clearly positively correlated to the borough’s economic situation. </p>
+  </div>
+
+  <div class="float-child">
+    <div align="center"> {% include scatter3d.html %} </div>
+
+  </div>
+
+</div>
 
 <h2> References </h2>
 
